@@ -4,15 +4,16 @@ Lógica base de varios juegos populares de cartas, incluye generación de cartas
 
 
 Truco (En desarrollo)
+- 20% completado
 
 Actualmente:
 - Generación de baraja española sin ochos y nueves para truco
 - Asignación de valores truco y envido a cartas 
-
-
-Por hacer:
 - Mostrar el mazo creado
 - Mezclar mazo
+
+Por hacer:
+
 - Crear jugadores
 - Crear sistema de puntaje
 - Crear ronda
