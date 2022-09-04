@@ -15,7 +15,15 @@ public class Main {
         opciones = scanner.nextInt();*/
         Carta.generarMazo(mazo); //Genero un mazo básico sin ochos y nueves
         Carta.valoresTruco(mazo); //Le aplico los valores del juego (truco y envido) a las cartas creadas
-//
+        for(int i=0;i<40;i++){
+            System.out.println("Mazo generado y con valores añadidos");
+            System.out.println(mazo.get(i));
+        }
+        Carta.mezclarMazo(mazo);
+        System.out.println("Mazo mezclado listo para juego");
+        for(int i=0;i<40;i++){
+            System.out.println(mazo.get(i));
+        }
 
 
 

@@ -1,6 +1,8 @@
 package Truco;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class Carta {
@@ -18,49 +20,41 @@ public class Carta {
 
     public static void generarMazo(ArrayList mazo) {
         System.out.println("Generando una buena baraja de cartas sin ochos y nueves");
-        for(int c=0; c<=40;c++){
             //Cartas espada
             for (int i = 1; i <= 7; i++) {
                 System.out.println(i);
-                new Carta(i, "espada", 0, 0);
-                System.out.println(mazo.get(i));
+                mazo.add(new Carta(i, "espada", 0, 0));
             }
             for (int i = 10; i <= 12; i++) {
-                new Carta(i, "espada", 0, 0);
-                System.out.println(mazo.get(i));
+                mazo.add(new Carta(i, "espada", 0, 0));
             }
             //Cartas basto
             for (int i = 1; i <= 7; i++) {
-                new Carta(i, "basto", 0, 0);
-                System.out.println(mazo.get(i));
+                mazo.add(new Carta(i, "basto", 0, 0));
             }
             for (int i = 10; i <= 12; i++) {
-                new Carta(i, "basto", 0, 0);
-                System.out.println(mazo.get(i));
+                mazo.add(new Carta(i, "basto", 0, 0));
             }
             //Cartas oro
             for (int i = 1; i <= 7; i++) {
-                new Carta(i, "oro", 0, 0);
-                System.out.println(mazo.get(i));
+                mazo.add(new Carta(i, "oro", 0, 0));
             }
             for (int i = 10; i <= 12; i++) {
-                new Carta(i, "oro", 0, 0);
-                System.out.println(mazo.get(i));
+                mazo.add(new Carta(i, "oro", 0, 0));
             }
             //Cartas copa
             for (int i = 1; i <= 7; i++) {
-                new Carta(i, "copa", 0, 0);
-                System.out.println(mazo.get(i));
+                mazo.add(new Carta(i, "copa", 0, 0));
             }
             for (int i = 10; i <= 12; i++) {
-                new Carta(i, "copa", 0, 0);
-                System.out.println(mazo.get(i));
+                mazo.add(new Carta(i, "copa", 0, 0));
             }
+
         }
-    }
+
 
     public static void valoresTruco(List<Carta> mazo) {
-        for (int i = 1; i <= 40; i++) {
+        for (int i = 0; i < 40; i++) {
             Carta carta = mazo.get(i);
             if (carta.valor == 1 && carta.palo == "espada") {
                 carta.setTruco(14);
@@ -132,6 +126,10 @@ public class Carta {
         }
     }
 
+    public static void mezclarMazo(List<Carta> mazo){
+        Collections.shuffle(mazo);
+    }
+
     public int getValor() {
         return valor;
     }
@@ -162,6 +160,16 @@ public class Carta {
 
     public void setEnvido(int envido) {
         this.envido = envido;
+    }
+
+    @Override
+    public String toString() {
+        return "Carta{" +
+                "valor=" + valor +
+                ", palo='" + palo + '\'' +
+                ", truco=" + truco +
+                ", envido=" + envido +
+                '}';
     }
 }
 
