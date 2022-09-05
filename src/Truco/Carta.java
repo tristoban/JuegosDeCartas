@@ -11,6 +11,7 @@ public class Carta {
     private int truco;
     private int envido;
 
+
     public Carta(int valor, String palo, int truco, int envido) {
         this.valor = valor;
         this.palo = palo;
@@ -23,28 +24,28 @@ public class Carta {
             //Cartas espada
             for (int i = 1; i <= 7; i++) {
                 System.out.println(i);
-                mazo.add(new Carta(i, "espada", 0, 0));
+                mazo.add(new Carta(i, "espada", 0, i));
             }
             for (int i = 10; i <= 12; i++) {
                 mazo.add(new Carta(i, "espada", 0, 0));
             }
             //Cartas basto
             for (int i = 1; i <= 7; i++) {
-                mazo.add(new Carta(i, "basto", 0, 0));
+                mazo.add(new Carta(i, "basto", 0, i));
             }
             for (int i = 10; i <= 12; i++) {
                 mazo.add(new Carta(i, "basto", 0, 0));
             }
             //Cartas oro
             for (int i = 1; i <= 7; i++) {
-                mazo.add(new Carta(i, "oro", 0, 0));
+                mazo.add(new Carta(i, "oro", 0, i));
             }
             for (int i = 10; i <= 12; i++) {
                 mazo.add(new Carta(i, "oro", 0, 0));
             }
             //Cartas copa
             for (int i = 1; i <= 7; i++) {
-                mazo.add(new Carta(i, "copa", 0, 0));
+                mazo.add(new Carta(i, "copa", 0, i));
             }
             for (int i = 10; i <= 12; i++) {
                 mazo.add(new Carta(i, "copa", 0, 0));
@@ -58,37 +59,30 @@ public class Carta {
             Carta carta = mazo.get(i);
             if (carta.valor == 1 && carta.palo == "espada") {
                 carta.setTruco(14);
-                carta.setEnvido(i);
                 mazo.set(i,carta);
             }
             else if (carta.valor == 1 && carta.palo == "basto") {
                 carta.setTruco(13);
-                carta.setEnvido(i);
                 mazo.set(i,carta);
             }
             else if (carta.valor == 7 && carta.palo == "espada") {
                 carta.setTruco(12);
-                carta.setEnvido(i);
                 mazo.set(i,carta);
             }
             else if (carta.valor == 7 && carta.palo == "oro") {
                 carta.setTruco(11);
-                carta.setEnvido(i);
                 mazo.set(i,carta);
             }
             else if (carta.valor == 3) {
                 carta.setTruco(10);
-                carta.setEnvido(i);
                 mazo.set(i,carta);
             }
             else if (carta.valor == 2) {
                 carta.setTruco(9);
-                carta.setEnvido(i);
                 mazo.set(i,carta);
             }
             else if (carta.valor == 1 && carta.palo == "copa" || carta.palo == "oro") {
                 carta.setTruco(8);
-                carta.setEnvido(i);
                 mazo.set(i,carta);
             }
             else if (carta.valor == 12) {
@@ -105,22 +99,18 @@ public class Carta {
             }
             else if (carta.valor == 7 && carta.palo == "basto" || carta.palo == "copa") {
                 carta.setTruco(4);
-                carta.setEnvido(i);
                 mazo.set(i,carta);
             }
             else if (carta.valor == 6) {
                 carta.setTruco(3);
-                carta.setEnvido(i);
                 mazo.set(i,carta);
             }
             else if (carta.valor == 5) {
                 carta.setTruco(2);
-                carta.setEnvido(i);
                 mazo.set(i,carta);
             }
             else if (carta.valor == 4) {
                 carta.setTruco(1);
-                carta.setEnvido(i);
                 mazo.set(i,carta);
             }
         }
