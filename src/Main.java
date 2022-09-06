@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        String nombre;
+        String nombre; //nombre jugador
         Scanner scanner = new Scanner(System.in);
         ArrayList<Carta> mazo = new ArrayList<>();
         ArrayList<Carta> mesa1 = new ArrayList<>();
@@ -17,9 +17,9 @@ public class Main {
         System.out.println("Generando mazo, dando valores y mezclando...");
         Carta.generarMazo(mazo); //Genero un mazo básico sin ochos y nueves
         Carta.valoresTruco(mazo); //Le aplico los valores del juego (truco y envido) a las cartas creadas
-        /*for(int i=0;i<40;i++){
-            //System.out.println(mazo.get(i));
-        }*/
+        for(int i=0;i<40;i++){
+            System.out.println(mazo.get(i));
+        }
         Carta.mezclarMazo(mazo);
         /*for(int i=0;i<40;i++){
             System.out.println(mazo.get(i));
@@ -35,18 +35,18 @@ public class Main {
         //repartimos la primera mano
 
         //cartas en mesa para el jugador1
-        int pos = 0;
+
         for(int i=0; i<=2;i++){
-            mesa1.add(pos,mazo.get(i));
-            pos++;
+            mesa1.add(mazo.get(i));
+            //mesa1.add(pos,mazo.get(i));
+
         }
         jugador1.setMano(mesa1); //seteamos la mano
 
         //cartas en mesa para el jugador2
-        pos = 0;
-        for(int i=2; i<=4;i++){
-            mesa2.add(pos,mazo.get(i));
-            pos++;
+
+        for(int i=3; i<=5;i++){
+            mesa2.add(mazo.get(i));
         }
         jugador2.setMano(mesa2);
 

@@ -50,7 +50,6 @@ public class Carta {
             for (int i = 10; i <= 12; i++) {
                 mazo.add(new Carta(i, "copa", 0, 0));
             }
-
         }
 
 
@@ -117,6 +116,7 @@ public class Carta {
     }
 
     public static void mezclarMazo(List<Carta> mazo){
+
         Collections.shuffle(mazo);
     }
 
