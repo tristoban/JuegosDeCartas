@@ -40,7 +40,8 @@ public class Main {
             mesa1.add(pos,mazo.get(i));
             pos++;
         }
-        jugador1.setMano(mesa1);
+        jugador1.setMano(mesa1); //seteamos la mano
+
         //cartas en mesa para el jugador2
         pos = 0;
         for(int i=2; i<=4;i++){
@@ -56,6 +57,29 @@ public class Main {
         //mostramos cartas jugador 2
         System.out.println(jugador2.getNombre()+", tus cartas son:");
         System.out.println(jugador2.getMano());
+
+        boolean juego = true; // seteamos un booleano que tenga como condicionamiento el puntaje menor a 30 en cualquiera de los jugadores
+        int hand = 0; //seteamos quien es mano
+
+        //Arrancamos el juego
+        while(juego==true){
+            if (hand%2==0){
+
+
+
+            } else {
+
+
+
+            }
+            if(jugador1.getPuntajeTotal()>=30 || jugador2.getPuntajeTotal()>=30){
+                juego = false;
+            }
+            hand++; //con esto rotamos el jugador "mano"
+        }
+
+
+
 
 
     }
