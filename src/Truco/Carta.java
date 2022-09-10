@@ -58,6 +58,7 @@ public class Carta {
             Carta carta = mazo.get(i);
             if (carta.valor == 1 && carta.palo == "espada") {
                 carta.setTruco(14);
+                System.out.println(carta);
                 mazo.set(i,carta);
             }
             else if (carta.valor == 1 && carta.palo == "basto") {

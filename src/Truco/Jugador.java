@@ -8,8 +8,7 @@ public class Jugador {
     private int puntajeTotal;
     private int puntajeRonda;
     private int puntajeEnvido;
-
-    ArrayList<Carta> mano = new ArrayList<>();
+    private ArrayList<Carta> mano = new ArrayList<>();
 
     public Jugador(String nombre, int puntajeTotal, int puntajeRonda, int puntajeEnvido) {
         this.nombre = nombre;
@@ -17,6 +16,13 @@ public class Jugador {
         this.puntajeRonda = puntajeRonda;
         this.puntajeEnvido = puntajeEnvido;
     }
+
+    public void mostrarMisCartas(){
+        for (Carta cartas:this.mano){
+            System.out.println("el " + cartas.getValor() + " de "+cartas.getPalo() );
+        }
+    }
+
 
     public String getNombre() {
         return nombre;
@@ -51,10 +57,12 @@ public class Jugador {
     }
 
     public ArrayList<Carta> getMano() {
+
         return mano;
     }
 
     public void setMano(ArrayList<Carta> mano) {
+
         this.mano = mano;
     }
 }

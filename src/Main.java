@@ -17,9 +17,9 @@ public class Main {
         System.out.println("Generando mazo, dando valores y mezclando...");
         Carta.generarMazo(mazo); //Genero un mazo básico sin ochos y nueves
         Carta.valoresTruco(mazo); //Le aplico los valores del juego (truco y envido) a las cartas creadas
-        for(int i=0;i<40;i++){
+        /*for(int i=0;i<40;i++){
             System.out.println(mazo.get(i));
-        }
+        }*/
         Carta.mezclarMazo(mazo);
         /*for(int i=0;i<40;i++){
             System.out.println(mazo.get(i));
@@ -52,11 +52,11 @@ public class Main {
 
         //mostramos cartas jugador 1
         System.out.println(jugador1.getNombre()+", tus cartas son:");
-        System.out.println(jugador1.getMano());
 
+        jugador1.mostrarMisCartas();
         //mostramos cartas jugador 2
         System.out.println(jugador2.getNombre()+", tus cartas son:");
-        System.out.println(jugador2.getMano());
+        jugador2.mostrarMisCartas();
 
         boolean juego = true; // seteamos un booleano que tenga como condicionamiento el puntaje menor a 30 en cualquiera de los jugadores
         int hand = 0; //seteamos quien es mano
@@ -64,6 +64,7 @@ public class Main {
         //Arrancamos el juego
         while(juego==true){
             if (hand%2==0){
+
 
 
 
